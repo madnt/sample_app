@@ -43,6 +43,10 @@ Spork.prefork do
     #     --seed 1234
     config.order = "random"
     config.include Capybara::DSL
+
+    #Fix root_path
+    config.include Rails.application.routes.url_helpers
+
   end
 end
 
